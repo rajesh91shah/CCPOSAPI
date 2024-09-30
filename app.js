@@ -1,6 +1,11 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const port = 3001;
+
+
+// Allow all origins (you can also restrict this to specific origins)
+app.use(cors());
 
 // In-memory storage for data
 let storedData = [];
